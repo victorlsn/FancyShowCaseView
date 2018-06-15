@@ -339,6 +339,9 @@ public class FancyShowCaseView extends FrameLayout implements ViewTreeObserver.O
 
                         // let the touch event pass on to whoever needs it
                         if (isWithin) {
+                            if (mCloseOnTouch) {
+                                hide();
+                            }
                             return false;
                         } else {
                             if (mCloseOnTouch) {
